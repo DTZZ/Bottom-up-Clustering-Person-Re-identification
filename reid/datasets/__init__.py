@@ -17,7 +17,7 @@ __factory = {
 
 
 def names():
-    return sorted(__factory.keys())
+    return sorted(__factory.keys())         # 'mars', 'DukeMTMC-VideoReID', 'market1501', 'duke'
 
 
 def create(name, root, *args, **kwargs):

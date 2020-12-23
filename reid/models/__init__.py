@@ -9,7 +9,7 @@ __factory = {
 
 
 def names():
-    return sorted(__factory.keys())
+    return sorted(__factory.keys())     # 'avg_pool'
 
 
 def create(name, *args, **kwargs):
@@ -43,6 +43,6 @@ def create(name, *args, **kwargs):
         If positive, will append a Linear layer at the end as the classifier
         with this number of output units. Default: 0
     """
-    if name not in __factory:
-        raise KeyError("Unknown model:", name)
-    return __factory[name](*args, **kwargs)
+    if name not in __factory:                   # name = 'avg_pool'
+        raise KeyError("Unknown model:", name)  
+    return __factory[name](*args, **kwargs)     # return End2End_AvgPooling(0.5, 1024, False)

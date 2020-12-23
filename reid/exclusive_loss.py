@@ -24,7 +24,7 @@ class Exclusive(autograd.Function):
 
 
 class ExLoss(nn.Module):
-    def __init__(self, num_features, num_classes, t=1.0,
+    def __init__(self, num_features, num_classes, t=1.0,        # num_features = 1024
                  weight=None):
         super(ExLoss, self).__init__()
         self.num_features = num_features
